@@ -1,1 +1,155 @@
 
+:root{
+    --bg:#020617;
+    --surface:#0F172A;
+    --surface2:#111C31;
+    --primary:#7B2EFF;
+    --secondary:#4D6BFF;
+    --accent:#00C8FF;
+    --text:#FFFFFF;
+    --text2:#94A3B8;
+    --radius:22px;
+    --shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+.header{
+    padding:80px 0 50px;
+    text-align:center;
+}
+
+.logo{
+    width:120px;
+    margin-bottom:24px;
+}
+
+.header h1{
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.subtitle{
+    color:var(--text2);
+    font-size:20px;
+    margin-top:18px;
+    line-height:1.7;
+}
+
+.apps{
+    padding:60px 0;
+}
+
+.apps h2{
+    text-align:center;
+    margin-bottom:45px;
+    font-size:34px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:linear-gradient(180deg,var(--surface),var(--surface2));
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:var(--radius);
+    padding:30px;
+    transition:.35s;
+    box-shadow:var(--shadow);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(123,46,255,.4);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--text2);
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    padding:13px 26px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:80px;
+    padding:50px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+}
+
+.footer p{
+    color:var(--text2);
+    margin:8px 0;
+}
+
+@media(max-width:768px){
+
+.header{
+    padding-top:60px;
+}
+
+.header h1{
+    font-size:38px;
+}
+
+.subtitle{
+    font-size:17px;
+}
+
+.logo{
+    width:90px;
+}
+
+.apps h2{
+    font-size:28px;
+}
+
+}
