@@ -174,7 +174,6 @@ observer.observe(item);
 
 });
 
-
 /* ==========================================================
 ACTIVE MENU
 ========================================================== */
@@ -282,4 +281,54 @@ button.addEventListener("click",function(e){
 
 const ripple=document.createElement("span");
 
-const rect
+const rect=this.getBoundingClientRect();
+
+const size=Math.max(rect.width,rect.height);
+
+ripple.style.width=size+"px";
+
+ripple.style.height=size+"px";
+
+ripple.style.left=
+
+e.clientX-rect.left-size/2+"px";
+
+ripple.style.top=
+
+e.clientY-rect.top-size/2+"px";
+
+ripple.className="ripple";
+
+this.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+
+
+/* ==========================================================
+PREVENT EMPTY LINKS
+========================================================== */
+
+document.querySelectorAll('a[href="#"]').forEach(link=>{
+
+link.addEventListener("click",e=>{
+
+e.preventDefault();
+
+});
+
+});
+
+
+
+/* ==========================================================
+END
+========================================================== */
