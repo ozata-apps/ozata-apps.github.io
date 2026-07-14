@@ -1,27 +1,33 @@
-// Navbar scroll efekti
 const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(5, 8, 22, 0.95)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(5, 8, 22, 0.8)';
+        navbar.classList.remove('scrolled');
     }
 });
 
-// Mobile menu
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
 });
 
-// Smooth scroll
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             const offset = 80;
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -33,7 +39,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll reveal
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -48,16 +53,18 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.product-info, .product-phone, .coming-card, .feature-card, .contact-item, .contact-form').forEach(el => {
+document.querySelectorAll('.product-text, .product-visual, .coming-card, .why-card, .contact-item, .contact-form, .mission-title, .mission-desc').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
 
-// Form
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        console.log('Form data:', data);
         alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
         contactForm.reset();
     });
