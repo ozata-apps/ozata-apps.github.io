@@ -1365,6 +1365,13 @@ body:hover .cursor-glow { opacity: 1; }
     border: 1px solid rgba(124, 77, 255, 0.3);
 }
 
+.coming-app-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
 .coming-app-purple { background: rgba(124, 77, 255, 0.2); color: var(--purple-light); }
 .coming-app-pink { background: rgba(176, 109, 255, 0.2); color: #b06dff; }
 .coming-app-orange { background: rgba(255, 159, 67, 0.2); color: #ff9f43; }
