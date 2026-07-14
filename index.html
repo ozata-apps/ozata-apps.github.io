@@ -3,38 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OZATA - Sihir gibi pratik, gerçekçi çözümler. Muhasebecim uygulaması ile işinizi kolaylaştırın.">
-    <meta name="theme-color" content="#0a0a0a">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="OZATA | Sihir Gibi Pratik Çözümler">
-    <meta property="og:description" content="Muhasebecim ve yakında gelecek uygulamalarla işinizi dijitalleştirin.">
-    <meta property="og:image" content="assets/images/og-image.png">
-    <meta property="og:type" content="website">
-    
+    <meta name="description" content="OZATA - Sihir gibi pratik, gerçekçi çözümler. Akıllı mobil uygulamalar geliştiriyoruz.">
     <title>OZATA | Sihir Gibi Pratik, Gerçekçi Çözümler</title>
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="assets/images/logo.png" alt="OZATA">
-                <span class="nav-logo-text">OZATA</span>
-            </a>
+            <div class="nav-logo">OZATA</div>
             <ul class="nav-links">
-                <li><a href="#urunler">Ürünler</a></li>
-                <li><a href="#ozellikler">Özellikler</a></li>
-                <li><a href="#misyon">Misyon</a></li>
+                <li><a href="#urunler">Uygulamalar</a></li>
+                <li><a href="#ozellikler">Hakkımızda</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
-            <a href="#urunler" class="nav-cta">Uygulamayı İndir</a>
+            <a href="#urunler" class="nav-btn">İndir</a>
             <div class="burger">
                 <span></span>
                 <span></span>
@@ -43,187 +29,85 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg-glow"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Yeni: Muhasebecim Yayında
-                </div>
-                
-                <h1 class="hero-title">
-                    İşinizi <span class="gradient-text">Dijitalleştirin</span>
-                </h1>
-                
-                <p class="hero-subtitle">
-                    OZATA uygulamaları ile karmaşık iş süreçlerini basitleştirin. 
-                    Sihir gibi pratik, gerçekçi çözümler.
-                </p>
-                
-                <div class="hero-actions">
-                    <a href="#" class="btn-google-play">
-                        <i class="fab fa-google-play"></i>
-                        <div class="btn-text">
-                            <span class="btn-small">Şimdi indir</span>
-                            <span class="btn-large">Google Play</span>
-                        </div>
-                    </a>
-                    <a href="#ozellikler" class="btn-secondary">
-                        <i class="fas fa-play-circle"></i>
-                        Özellikleri Keşfet
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <strong>10K+</strong>
-                        <span>Aktif Kullanıcı</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <strong>4.8</strong>
-                        <span>Uygulama Puanı</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <strong>%99.9</strong>
-                        <span>Uptime</span>
-                    </div>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-logo">
+                <div class="oz-logo">
+                    <span class="letter-o">O</span>
+                    <span class="letter-z">Z</span>
                 </div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                        <div class="app-preview">
-                            <div class="app-header">
-                                <img src="assets/images/logo.png" alt="OZATA" class="app-logo">
-                                <span class="app-name">Muhasebecim</span>
-                            </div>
-                            <div class="app-content">
-                                <div class="app-card">
-                                    <div class="app-card-icon"><i class="fas fa-chart-line"></i></div>
-                                    <div class="app-card-info">
-                                        <span class="app-card-label">Aylık Gelir</span>
-                                        <span class="app-card-value">₺48.250</span>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <div class="app-card-icon"><i class="fas fa-file-invoice"></i></div>
-                                    <div class="app-card-info">
-                                        <span class="app-card-label">Faturalar</span>
-                                        <span class="app-card-value">127</span>
-                                    </div>
-                                </div>
-                                <div class="app-card">
-                                    <div class="app-card-icon"><i class="fas fa-users"></i></div>
-                                    <div class="app-card-info">
-                                        <span class="app-card-label">Müşteriler</span>
-                                        <span class="app-card-value">342</span>
-                                    </div>
-                                </div>
-                                <div class="app-chart">
-                                    <div class="chart-bar" style="height: 60%"></div>
-                                    <div class="chart-bar" style="height: 80%"></div>
-                                    <div class="chart-bar" style="height: 45%"></div>
-                                    <div class="chart-bar" style="height: 90%"></div>
-                                    <div class="chart-bar" style="height: 70%"></div>
-                                    <div class="chart-bar" style="height: 95%"></div>
-                                    <div class="chart-bar" style="height: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="phone-glow"></div>
-                </div>
-            </div>
+            <p class="hero-subtitle-top">POWERED BY OZATA</p>
+            <h1 class="hero-title">SİHİR GİBİ PRATİK,<br>GERÇEKÇİ ÇÖZÜMLER</h1>
+            <p class="hero-desc">Akıllı mobil uygulamalar geliştiriyoruz.</p>
+            <a href="#urunler" class="btn-primary">Uygulamaları Keşfet</a>
         </div>
-        
-        <div class="scroll-hint">
-            <span>Aşağı Kaydır</span>
+        <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Ürünler Section -->
-    <section id="urunler" class="products">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Ürünlerimiz</span>
-                <h2 class="section-title">OZATA Ekosistemi</h2>
-                <p class="section-desc">
-                    Her biri farklı bir ihtiyaca yönelik, birbirine entegre uygulamalar.
-                </p>
-            </div>
-            
-            <div class="products-grid">
-                <!-- Muhasebecim - Öne Çıkan -->
-                <div class="product-card featured">
-                    <div class="product-badge">Yayında</div>
-                    <div class="product-image">
-                        <div class="product-phone">
-                            <div class="product-phone-notch"></div>
-                            <div class="product-phone-screen">
-                                <img src="assets/images/muhasebecim.png" alt="Muhasebecim App" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-screen\'><i class=\'fas fa-calculator\'></i><span>Muhasebecim</span></div>'">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Muhasebecim</h3>
-                        <p class="product-tagline">Küçük işletmeler için akıllı muhasebe asistanı</p>
-                        <p class="product-desc">
-                            Fatura takibi, gelir-gider yönetimi, müşteri listesi ve detaylı raporlar. 
-                            Tüm muhasebe işlemleriniz tek uygulamada.
-                        </p>
-                        <div class="product-features">
-                            <span><i class="fas fa-check"></i> Fatura Yönetimi</span>
-                            <span><i class="fas fa-check"></i> Gelir-Gider Takibi</span>
-                            <span><i class="fas fa-check"></i> Otomatik Raporlar</span>
-                            <span><i class="fas fa-check"></i> Bulut Yedekleme</span>
-                        </div>
-                        <div class="product-actions">
-                            <a href="#" class="btn-google-play small">
-                                <i class="fab fa-google-play"></i>
-                                <span>Google Play'den İndir</span>
-                            </a>
-                            <a href="#" class="btn-link">
-                                Detaylı İncele <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+    <section id="urunler" class="product-section muhasebecim">
+        <div class="container product-container">
+            <div class="product-info">
+                <span class="product-label">FİNANS</span>
+                <h2 class="product-title">Muhasebecim</h2>
+                <p class="product-desc">Gelir ve giderlerinizi kolayca yönetin. Finansal özgürlüğe giden yolda sizinle birlikte.</p>
+                <div class="product-buttons">
+                    <a href="#" class="btn-google-play">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </a>
+                    <a href="#" class="btn-outline">Detaylı incele</a>
                 </div>
-                
-                <!-- Yakında -->
-                <div class="product-card coming-soon">
-                    <div class="product-badge soon">Yakında</div>
-                    <div class="product-image">
-                        <div class="product-phone">
-                            <div class="product-phone-notch"></div>
-                            <div class="product-phone-screen coming-screen">
-                                <i class="fas fa-lock"></i>
-                                <span>Çok Yakında</span>
+            </div>
+            <div class="product-phone">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <span class="app-time">9:41</span>
+                            <span class="app-name">Muhasebecim</span>
+                        </div>
+                        <div class="app-content">
+                            <div class="app-balance">
+                                <span class="balance-label">Genel Bakış</span>
+                                <span class="balance-amount">₺ 28.540,00</span>
+                                <span class="balance-sub">Aylık Toplam Bakiye</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Yeni Uygulamalar</h3>
-                        <p class="product-tagline">OZATA ekosistemi büyüyor</p>
-                        <p class="product-desc">
-                            İşletmenizin her alanında size yardımcı olacak yeni uygulamalar 
-                            geliştirme aşamasında. Haberdar olmak için bizi takip edin.
-                        </p>
-                        <div class="product-features">
-                            <span><i class="fas fa-hourglass-half"></i> Geliştirme Aşamasında</span>
-                            <span><i class="fas fa-bell"></i> Erken Erişim İçin Kaydolun</span>
-                        </div>
-                        <div class="product-actions">
-                            <a href="#iletisim" class="btn-secondary small">
-                                <i class="fas fa-bell"></i>
-                                <span>Haberdar Ol</span>
-                            </a>
+                            <div class="app-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Gelir</span>
+                                    <span class="stat-value income">₺ 45.750,00</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Gider</span>
+                                    <span class="stat-value expense">₺ 17.210,00</span>
+                                </div>
+                            </div>
+                            <div class="app-chart">
+                                <span class="chart-title">Son 6 Ay</span>
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 45%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                    <div class="bar" style="height: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="app-transactions">
+                                <span class="transactions-title">Son İşlemler</span>
+                                <div class="transaction-item">
+                                    <span class="transaction-name">Market</span>
+                                    <span class="transaction-amount expense">-₺ 350,00</span>
+                                </div>
+                                <div class="transaction-item">
+                                    <span class="transaction-name">Maaş</span>
+                                    <span class="transaction-amount income">+₺ 15.000,00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,250 +115,301 @@
         </div>
     </section>
 
-    <!-- Özellikler Section -->
+    <section class="product-section medtak">
+        <div class="container product-container">
+            <div class="product-info">
+                <span class="product-label">SAĞLIK</span>
+                <h2 class="product-title">MedTak</h2>
+                <p class="product-desc">İlaç takibinizi kolaylaştırır. Zamanında hatırlatmalarla sağlığınız hep güvende.</p>
+                <div class="product-buttons">
+                    <a href="#" class="btn-google-play">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </a>
+                    <a href="#" class="btn-outline">Detaylı incele</a>
+                </div>
+            </div>
+            <div class="product-phone">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <span class="app-time">9:41</span>
+                            <span class="app-name">MedTak</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="app-content">
+                            <div class="med-section">
+                                <span class="med-title">Bugünkü İlaçlarım</span>
+                                <div class="med-item">
+                                    <div class="med-icon"><i class="fas fa-pills"></i></div>
+                                    <div class="med-info">
+                                        <span class="med-name">Vitamin D</span>
+                                        <span class="med-time">08:00</span>
+                                    </div>
+                                    <i class="fas fa-check-circle checked"></i>
+                                </div>
+                                <div class="med-item">
+                                    <div class="med-icon"><i class="fas fa-capsules"></i></div>
+                                    <div class="med-info">
+                                        <span class="med-name">Ağrı Kesici</span>
+                                        <span class="med-time">12:00</span>
+                                    </div>
+                                    <span class="med-status">Hatırlat</span>
+                                </div>
+                                <div class="med-item">
+                                    <div class="med-icon"><i class="fas fa-tablets"></i></div>
+                                    <div class="med-info">
+                                        <span class="med-name">Antibiyotik</span>
+                                        <span class="med-time">20:00</span>
+                                    </div>
+                                    <span class="med-status pending">Bekliyor</span>
+                                </div>
+                            </div>
+                            <div class="med-reminder">
+                                <span class="reminder-title">Yaklaşan Hatırlatmalar</span>
+                                <div class="reminder-item">
+                                    <div class="reminder-icon"><i class="fas fa-capsules"></i></div>
+                                    <span class="reminder-name">Antibiyotik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section couplelist">
+        <div class="container product-container">
+            <div class="product-info">
+                <span class="product-label">ALIŞVERİŞ</span>
+                <h2 class="product-title">CoupleList</h2>
+                <p class="product-desc">Sevdiklerinizle alışverişi paylaşın. Ortak listeniz her zaman senkronize kalsın.</p>
+                <div class="product-buttons">
+                    <a href="#" class="btn-google-play">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </a>
+                    <a href="#" class="btn-outline">Detaylı incele</a>
+                </div>
+            </div>
+            <div class="product-phone">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <span class="app-time">9:41</span>
+                            <span class="app-name">CoupleList</span>
+                            <div class="header-icons">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                        </div>
+                        <div class="app-content">
+                            <div class="list-section">
+                                <span class="list-title">Ortak Alışveriş Listem</span>
+                                <div class="list-item">
+                                    <span class="list-name">Süt</span>
+                                    <div class="list-controls">
+                                        <i class="fas fa-minus"></i>
+                                        <span class="list-qty">1</span>
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="list-item checked">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="list-name">Ekmek</span>
+                                </div>
+                                <div class="list-item checked">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="list-name">Yumurta</span>
+                                </div>
+                                <div class="list-item checked">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="list-name">Domates</span>
+                                </div>
+                                <div class="list-item checked">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="list-name">Peynir</span>
+                                </div>
+                                <div class="list-item">
+                                    <span class="list-name">Muz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coming-soon">
+        <div class="container">
+            <span class="section-label">YAKINDA</span>
+            <h2 class="section-title">Yeni Uygulamalar Yolda</h2>
+            <p class="section-desc">Sizin için yeni projeler üzerinde çalışıyoruz.</p>
+            <div class="coming-grid">
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="coming-info">
+                        <h3>Mutfak Günlüğüm</h3>
+                        <p>Lezzetli tarifler ve daha fazlası</p>
+                        <span class="coming-badge">Yakında</span>
+                    </div>
+                </div>
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="coming-info">
+                        <h3>Eğitim Oyunları</h3>
+                        <p>Çocuklar için eğlenceli ve öğretici oyunlar</p>
+                        <span class="coming-badge">Yakında</span>
+                    </div>
+                </div>
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="coming-info">
+                        <h3>Yeni Projeler</h3>
+                        <p>Heyecan verici daha fazlası çok yakında</p>
+                        <span class="coming-badge">Yakında</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="ozellikler" class="features">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Neden OZATA?</span>
-                <h2 class="section-title">Her Detayda Mükemmellik</h2>
-                <p class="section-desc">
-                    Uygulamalarımızı sıradan yapan hiçbir şey yok. İşte bizi farklı kılan özellikler.
-                </p>
-            </div>
-            
+            <span class="section-label">NEDEN OZATA</span>
+            <h2 class="section-title">Premium Deneyim</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Güvenli</h3>
-                    <p>Verileriniz end-to-end şifreleme ile korunur. Banka düzeyinde güvenlik standartları.</p>
+                    <p>Verileriniz her zaman güvende</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Hızlı</h3>
-                    <p>Milisaniyeler içinde yanıt veren altyapı. Beklemek yok, işinizi halledin.</p>
-                </div>
-                
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Modern</h3>
-                    <p>En son teknolojilerle geliştirilmiş, şık ve kullanımı kolay arayüz.</p>
+                    <p>Son teknoloji ile geliştirilmiş</p>
                 </div>
-                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Hızlı</h3>
+                    <p>Milisaniyeler içinde yanıt</p>
+                </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Bulut Senkronizasyonu</h3>
-                    <p>Tüm cihazlarınızda anlık senkronizasyon. Verileriniz her zaman yanınızda.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Sürekli Güncelleme</h3>
-                    <p>Düzenli güncellemelerle yeni özellikler ve iyileştirmeler sürekli eklenir.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>7/24 Destek</h3>
-                    <p>Takıldığınız her an ulaşabileceğiniz profesyonel destek ekibi.</p>
+                    <p>Tüm cihazlarınızda anlık senkronizasyon</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Misyon Section -->
-    <section id="misyon" class="mission">
+    <section class="mission">
         <div class="container">
-            <div class="mission-content">
-                <div class="mission-text">
-                    <span class="section-label">Misyonumuz</span>
-                    <h2 class="section-title left-align">
-                        Teknolojiyi <span class="gradient-text">Herkes İçin</span> Erişilebilir Kılmak
-                    </h2>
-                    <p>
-                        OZATA olarak inancımız basit: Karmaşık iş süreçleri basit çözümlerle 
-                        yönetilebilir olmalı. Küçük işletmelerden bireysel kullanıcılara kadar 
-                        herkesin erişebileceği, profesyonel kalitede uygulamalar geliştiriyoruz.
-                    </p>
-                    <p>
-                        Her uygulamamızda üç temel ilkeyi takip ediyoruz: 
-                        <strong>pratiklik</strong>, <strong>güvenilirlik</strong> ve 
-                        <strong>kullanıcı odaklılık</strong>.
-                    </p>
-                    <div class="mission-values">
-                        <div class="value-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <span>Yenilikçi</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-heart"></i>
-                            <span>Kullanıcı Odaklı</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-gem"></i>
-                            <span>Kaliteli</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mission-visual">
-                    <div class="mission-logo-container">
-                        <img src="assets/images/logo.png" alt="OZATA" class="mission-logo">
-                        <div class="mission-logo-glow"></div>
-                    </div>
-                </div>
-            </div>
+            <span class="section-label">MİSYON</span>
+            <h2 class="mission-title">Teknolojiyi Herkes İçin Erişilebilir Kılmak</h2>
+            <p class="mission-desc">Karmaşık iş süreçleri basit çözümlerle yönetilebilir olmalı.</p>
         </div>
     </section>
 
-    <!-- İletişim Section -->
     <section id="iletisim" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">İletişim</span>
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-label">İLETİŞİM</span>
                 <h2 class="section-title">Bizimle İletişime Geçin</h2>
-                <p class="section-desc">
-                    Sorularınız, önerileriniz veya iş birlikleri için bize ulaşın.
-                </p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>E-posta</h4>
-                            <p>info@ozata.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Konum</h4>
-                            <p>Türkiye</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Çalışma Saatleri</h4>
-                            <p>Pzt - Cuma: 09:00 - 18:00</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>E-posta</h4>
+                        <p>info@ozata.com</p>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Adınız</label>
-                            <input type="text" name="name" required placeholder="Adınızı girin">
-                        </div>
-                        <div class="form-group">
-                            <label>E-posta</label>
-                            <input type="email" name="email" required placeholder="ornek@email.com">
-                        </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Konum</h4>
+                        <p>Türkiye</p>
                     </div>
-                    <div class="form-group">
-                        <label>Konu</label>
-                        <input type="text" name="subject" required placeholder="Mesajınızın konusu">
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Pzt - Cuma: 09:00 - 18:00</p>
                     </div>
-                    <div class="form-group">
-                        <label>Mesajınız</label>
-                        <textarea name="message" rows="5" required placeholder="Mesajınızı buraya yazın..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">
-                        <span>Mesaj Gönder</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                </div>
             </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Adınız</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Konu</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Mesajınız</label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Mesaj Gönder</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="OZATA">
-                        <span>OZATA</span>
-                    </div>
-                    <p class="footer-tagline">Sihir gibi pratik, gerçekçi çözümler</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Ürünler</h4>
-                        <ul>
-                            <li><a href="#urunler">Muhasebecim</a></li>
-                            <li><a href="#urunler">Yakında</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Şirket</h4>
-                        <ul>
-                            <li><a href="#misyon">Misyon</a></li>
-                            <li><a href="#ozellikler">Özellikler</a></li>
-                            <li><a href="#iletisim">İletişim</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Yasal</h4>
-                        <ul>
-                            <li><a href="#">Gizlilik Politikası</a></li>
-                            <li><a href="#">Kullanım Şartları</a></li>
-                            <li><a href="#">KVKK</a></li>
-                        </ul>
-                    </div>
+        <div class="footer-top">
+            <div class="footer-logo-large">
+                <div class="oz-logo">
+                    <span class="letter-o">O</span>
+                    <span class="letter-z">Z</span>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 OZATA. Tüm hakları saklıdır.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            <p class="footer-subtitle">POWERED BY OZATA</p>
+            <p class="footer-tagline">SİHİR GİBİ PRATİK,<br>GERÇEKÇİ ÇÖZÜMLER</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-brand">
+                <span class="footer-logo-text">OZATA</span>
+                <span class="footer-powered">POWERED BY OZATA</span>
             </div>
+            <div class="footer-links">
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#iletisim">İletişim</a>
+                <a href="#">GitHub</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 OZATA. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
