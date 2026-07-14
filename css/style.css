@@ -27,6 +27,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     cursor: default;
 }
 
@@ -245,7 +246,7 @@ body:hover .cursor-glow { opacity: 1; }
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px; height: 400px;
+    width: 450px; height: 450px;
     background: radial-gradient(circle, rgba(124, 77, 255, 0.5) 0%, rgba(94, 220, 255, 0.2) 50%, transparent 70%);
     border-radius: 50%;
     filter: blur(30px);
@@ -256,10 +257,10 @@ body:hover .cursor-glow { opacity: 1; }
     50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 .hero-logo {
-    width: 300px; height: 300px;
+    width: 350px; height: 350px;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 0 50px rgba(124, 77, 255, 0.6));
+    filter: drop-shadow(0 0 60px rgba(124, 77, 255, 0.7));
     animation: float 6s ease-in-out infinite, breathe 4s ease-in-out infinite;
 }
 @keyframes float {
@@ -268,7 +269,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 @keyframes breathe {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    50% { transform: scale(1.05); }
 }
 .hero-powered {
     font-size: 0.9rem;
@@ -427,7 +428,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 .product-text-full { text-align: center; }
 
-/* PHONE MOCKUP - BÜYÜTÜLDÜ */
+/* PHONE MOCKUP - BÜYÜTÜLDÜ & İYİLEŞTİRİLDİ */
 .product-visual { display: flex; justify-content: center; }
 .product-visual-centered {
     position: relative;
@@ -455,9 +456,14 @@ body:hover .cursor-glow { opacity: 1; }
         0 0 100px rgba(124, 77, 255, 0.2);
     position: relative;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s ease;
+    animation: phone-float 6s ease-in-out infinite;
 }
 .phone-mockup.large {
     width: 340px; height: 700px;
+}
+@keyframes phone-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 .phone-hover:hover {
     transform: translateY(-20px) scale(1.02);
@@ -465,6 +471,9 @@ body:hover .cursor-glow { opacity: 1; }
         0 0 0 2px #3a3a3a,
         0 60px 100px rgba(0, 0, 0, 0.6),
         0 0 120px rgba(124, 77, 255, 0.3);
+}
+.phone-mockup:hover {
+    animation-play-state: paused;
 }
 .phone-notch {
     position: absolute;
@@ -480,6 +489,8 @@ body:hover .cursor-glow { opacity: 1; }
     background: #0f0f1e;
     border-radius: 34px;
     overflow: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 .app-screen {
     padding: 44px 16px 16px;
@@ -780,7 +791,7 @@ body:hover .cursor-glow { opacity: 1; }
 .coming-info p { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 1rem; line-height: 1.5; }
 .coming-tag { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
 
-/* WHY SECTION */
+/* WHY SECTION - İYİLEŞTİRİLDİ */
 .why-section { padding: 120px 0; background: var(--bg-secondary); }
 .section-label {
     display: block;
@@ -810,7 +821,7 @@ body:hover .cursor-glow { opacity: 1; }
     border-radius: 20px;
     padding: 2.5rem 1.5rem;
     text-align: center;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
@@ -825,11 +836,14 @@ body:hover .cursor-glow { opacity: 1; }
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .why-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 77, 255, 0.15);
+    transform: translateY(-12px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 60px rgba(124, 77, 255, 0.2),
+        inset 0 0 30px rgba(124, 77, 255, 0.05);
 }
 .why-card:hover::before {
     background: linear-gradient(135deg, var(--purple), var(--cyan));
@@ -845,14 +859,14 @@ body:hover .cursor-glow { opacity: 1; }
     justify-content: center;
     font-size: 2rem;
     color: var(--purple-light);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .why-card:hover .why-icon {
     background: var(--gradient);
     color: var(--white);
     border-color: transparent;
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(124, 77, 255, 0.4);
+    transform: scale(1.15) rotate(3deg);
+    box-shadow: 0 15px 40px rgba(124, 77, 255, 0.5);
 }
 .why-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
 .why-card p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.6; }
@@ -1116,8 +1130,8 @@ body:hover .cursor-glow { opacity: 1; }
         border-bottom: 1px solid var(--border);
         gap: 1.5rem;
     }
-    .hero-logo { width: 220px; height: 220px; }
-    .hero-logo-glow { width: 320px; height: 320px; }
+    .hero-logo { width: 260px; height: 260px; }
+    .hero-logo-glow { width: 360px; height: 360px; }
     .product-section { padding: 80px 0; }
     .phone-mockup { width: 260px; height: 540px; }
     .phone-mockup.large { width: 280px; height: 580px; }
