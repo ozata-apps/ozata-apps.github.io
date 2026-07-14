@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OZATA - Sihir gibi pratik, gerçekçi çözümler. Akıllı mobil uygulamalar.">
     <meta name="theme-color" content="#050816">
-    <meta property="og:title" content="OZATA | Sihir Gibi Pratik, Gerçekçi Çözümler">
-    <meta property="og:description" content="Akıllı mobil uygulamalar geliştiriyoruz.">
-    <meta property="og:type" content="website">
     <title>OZATA | Sihir Gibi Pratik, Gerçekçi Çözümler</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
 
     <nav class="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">OZATA</a>
             <ul class="nav-links">
-                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#urunler">Uygulamalar</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
@@ -37,40 +36,41 @@
 
     <section id="hero" class="hero">
         <div class="hero-bg">
+            <div class="aurora aurora-1"></div>
+            <div class="aurora aurora-2"></div>
+            <div class="aurora aurora-3"></div>
+            <div class="mesh-gradient"></div>
             <div class="hero-glow glow-1"></div>
             <div class="hero-glow glow-2"></div>
+            <div class="hero-glow glow-3"></div>
+            <div class="noise-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
             <div class="hero-waves">
                 <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
                     <path class="wave wave-1" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,128C672,117,768,139,864,160C960,181,1056,203,1152,192C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     <path class="wave wave-2" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
-            <div class="stars"></div>
         </div>
 
-        <div class="hero-content">
+        <div class="hero-content" data-parallax="0.3">
             <div class="hero-logo-wrap">
                 <div class="hero-logo-glow"></div>
-                <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#7C4DFF"/>
-                            <stop offset="50%" stop-color="#6D5BFF"/>
-                            <stop offset="100%" stop-color="#5EDCFF"/>
-                        </linearGradient>
-                        <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#6D5BFF"/>
-                            <stop offset="100%" stop-color="#5EDCFF"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#logoGrad)" stroke-width="6"/>
-                    <path d="M 60 80 L 140 80 L 100 130 L 140 130" fill="none" stroke="url(#logoGrad2)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/images/logo.png" alt="OZATA" class="hero-logo">
             </div>
             <p class="hero-powered">POWERED BY OZATA</p>
             <h1 class="hero-title">SİHİR GİBİ PRATİK,<br>GERÇEKÇİ ÇÖZÜMLER</h1>
             <p class="hero-desc">Akıllı mobil uygulamalar geliştiriyoruz.</p>
-            <a href="#urunler" class="hero-cta">Uygulamaları Keşfet</a>
+            <div class="hero-buttons">
+                <a href="muhasebecim.html" class="btn-google magnetic">
+                    <i class="fab fa-google-play"></i>
+                    <span>Muhasebecim</span>
+                </a>
+                <a href="#urunler" class="btn-outline magnetic">
+                    <span>Uygulamaları Keşfet</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
 
         <div class="scroll-indicator">
@@ -79,182 +79,25 @@
     </section>
 
     <section id="urunler" class="product-section product-finance">
+        <div class="section-bg-glow"></div>
         <div class="product-container">
-            <div class="product-text">
+            <div class="product-text" data-parallax="0.1">
                 <span class="product-label">FİNANS</span>
                 <h2 class="product-title">Muhasebecim</h2>
                 <p class="product-desc">Gelir ve giderlerinizi kolayca yönetin. Finansal özgürlüğe giden yolda sizinle birlikte.</p>
                 <div class="product-buttons">
-                    <a href="#" class="btn-google">
+                    <a href="muhasebecim.html" class="btn-google magnetic">
                         <i class="fab fa-google-play"></i>
                         <span>Google Play</span>
                     </a>
-                    <a href="#" class="btn-outline">Detaylı incele</a>
+                    <a href="muhasebecim.html" class="btn-outline">Detaylı incele</a>
                 </div>
             </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
+            <div class="product-visual" data-parallax="0.2">
+                <div class="phone-mockup phone-hover">
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
-                        <div class="app-screen app-muhasebecim">
-                            <div class="app-status-bar">
-                                <span>09:41</span>
-                                <span>Muhasebecim</span>
-                                <span><i class="fas fa-circle-notch"></i></span>
-                            </div>
-                            <div class="app-header-small">Genel Bakış</div>
-                            <div class="app-balance">₺ 28.540,00</div>
-                            <div class="app-balance-label">Aylık Toplam Bakiye</div>
-                            <div class="app-stats-row">
-                                <div class="app-stat">
-                                    <span class="app-stat-label">Gelir</span>
-                                    <span class="app-stat-value income">₺ 45.750,00</span>
-                                </div>
-                                <div class="app-stat">
-                                    <span class="app-stat-label">Gider</span>
-                                    <span class="app-stat-value expense">₺ 17.210,00</span>
-                                </div>
-                            </div>
-                            <div class="app-section-title">Son 6 Ay</div>
-                            <div class="app-chart">
-                                <div class="chart-bar" style="height: 40%"></div>
-                                <div class="chart-bar" style="height: 65%"></div>
-                                <div class="chart-bar" style="height: 50%"></div>
-                                <div class="chart-bar" style="height: 80%"></div>
-                                <div class="chart-bar" style="height: 70%"></div>
-                                <div class="chart-bar" style="height: 90%"></div>
-                            </div>
-                            <div class="app-section-title">Son İşlemler</div>
-                            <div class="app-transaction">
-                                <span class="transaction-dot red"></span>
-                                <span>Market</span>
-                                <span class="transaction-amount negative">-₺ 350,00</span>
-                            </div>
-                            <div class="app-transaction">
-                                <span class="transaction-dot green"></span>
-                                <span>Maaş</span>
-                                <span class="transaction-amount positive">+₺ 15.000,00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-section product-health">
-        <div class="product-container reverse">
-            <div class="product-text">
-                <span class="product-label">SAĞLIK</span>
-                <h2 class="product-title">MedTak</h2>
-                <p class="product-desc">İlaç takibinizi kolaylaştırır. Zamanında hatırlatmalarla sağlığınız hep güvende.</p>
-                <div class="product-buttons">
-                    <a href="#" class="btn-google btn-google-blue">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
-                    </a>
-                    <a href="#" class="btn-outline">Detaylı incele</a>
-                </div>
-            </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                        <div class="app-screen app-medtak">
-                            <div class="app-status-bar">
-                                <span>09:41</span>
-                                <span>MedTak</span>
-                                <span><i class="fas fa-plus"></i></span>
-                            </div>
-                            <div class="app-header-small">Bugünkü İlaçlarım</div>
-                            <div class="med-item">
-                                <div class="med-check checked"><i class="fas fa-check"></i></div>
-                                <div class="med-info">
-                                    <span class="med-name">Vitamin D</span>
-                                    <span class="med-time">08:00</span>
-                                </div>
-                            </div>
-                            <div class="med-item">
-                                <div class="med-check"></div>
-                                <div class="med-info">
-                                    <span class="med-name">Ağrı Kesici</span>
-                                    <span class="med-time">12:00</span>
-                                </div>
-                                <span class="med-status">Hatırlat</span>
-                            </div>
-                            <div class="med-item">
-                                <div class="med-check"></div>
-                                <div class="med-info">
-                                    <span class="med-name">Antibiyotik</span>
-                                    <span class="med-time">20:00</span>
-                                </div>
-                                <span class="med-status">Bekliyor</span>
-                            </div>
-                            <div class="app-section-title">Yaklaşan Hatırlatmalar</div>
-                            <div class="med-item upcoming">
-                                <div class="med-check"></div>
-                                <div class="med-info">
-                                    <span class="med-name">Antibiyotik</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-section product-shopping">
-        <div class="product-container">
-            <div class="product-text">
-                <span class="product-label">ALIŞVERİŞ</span>
-                <h2 class="product-title">CoupleList</h2>
-                <p class="product-desc">Sevdiklerinizle alışverişi paylaşın. Ortak listeniz her zaman senkronize kalsın.</p>
-                <div class="product-buttons">
-                    <a href="#" class="btn-google btn-google-purple">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
-                    </a>
-                    <a href="#" class="btn-outline">Detaylı incele</a>
-                </div>
-            </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                        <div class="app-screen app-couplelist">
-                            <div class="app-status-bar">
-                                <span>09:41</span>
-                                <span>CoupleList</span>
-                                <span><i class="fas fa-cog"></i> <i class="fas fa-cog"></i></span>
-                            </div>
-                            <div class="app-header-small">Ortak Alışveriş Listem</div>
-                            <div class="list-item">
-                                <div class="list-check"></div>
-                                <span class="list-name">Süt</span>
-                                <span class="list-qty">-1 →</span>
-                            </div>
-                            <div class="list-item">
-                                <div class="list-check checked"><i class="fas fa-check"></i></div>
-                                <span class="list-name checked-text">Ekmek</span>
-                            </div>
-                            <div class="list-item">
-                                <div class="list-check checked"><i class="fas fa-check"></i></div>
-                                <span class="list-name checked-text">Yumurta</span>
-                            </div>
-                            <div class="list-item">
-                                <div class="list-check checked"><i class="fas fa-check"></i></div>
-                                <span class="list-name checked-text">Domates</span>
-                            </div>
-                            <div class="list-item">
-                                <div class="list-check checked"><i class="fas fa-check"></i></div>
-                                <span class="list-name checked-text">Peynir</span>
-                            </div>
-                            <div class="list-item">
-                                <div class="list-check checked"><i class="fas fa-check"></i></div>
-                                <span class="list-name checked-text">Muz</span>
-                            </div>
-                        </div>
+                        <img src="assets/images/muhasebecim-screenshot.png" alt="Muhasebecim Ekranı" class="app-screenshot">
                     </div>
                 </div>
             </div>
@@ -262,49 +105,70 @@
     </section>
 
     <section class="coming-soon-section">
-        <div class="container">
-            <span class="section-label-coming">YAKINDA</span>
-            <h2 class="section-title-coming">Yeni Uygulamalar Yolda</h2>
-            <p class="section-desc-coming">Sizin için yeni projeler üzerinde çalışıyoruz.</p>
+        <div class="coming-bg">
+            <div class="coming-glow"></div>
+            <div class="coming-noise"></div>
+        </div>
+        <div class="container coming-container">
+            <div class="coming-massive-text">YAKINDA</div>
+            <div class="coming-content">
+                <span class="section-label-coming">YENİ UYGULAMALAR YOLDA</span>
+                <p class="section-desc-coming">Sizin için yeni projeler üzerinde çalışıyoruz.</p>
 
-            <div class="coming-grid">
-                <div class="coming-card coming-card-purple">
-                    <div class="coming-icon">
-                        <i class="fas fa-utensils"></i>
+                <div class="coming-apps-grid">
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-purple">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>MedTak</h3>
+                        <p>İlaç takibi ve hatırlatma</p>
                     </div>
-                    <div class="coming-info">
+
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-pink">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>CoupleList</h3>
+                        <p>Ortak alışveriş listesi</p>
+                    </div>
+
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-orange">
+                            <i class="fas fa-utensils"></i>
+                        </div>
                         <h3>Mutfak Günlüğüm</h3>
-                        <p>Lezzetli tarifler ve daha fazlası</p>
-                        <span class="coming-tag">Yakında</span>
+                        <p>Lezzetli tarifler</p>
                     </div>
-                </div>
 
-                <div class="coming-card coming-card-blue">
-                    <div class="coming-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="coming-info">
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-blue">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
                         <h3>Eğitim Oyunları</h3>
-                        <p>Çocuklar için eğlenceli ve öğretici oyunlar</p>
-                        <span class="coming-tag">Yakında</span>
+                        <p>Çocuklar için eğitici</p>
                     </div>
-                </div>
 
-                <div class="coming-card coming-card-pink">
-                    <div class="coming-icon">
-                        <i class="fas fa-rocket"></i>
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-green">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Üretim Takip</h3>
+                        <p>Üretim süreçleri yönetimi</p>
                     </div>
-                    <div class="coming-info">
-                        <h3>Yeni Projeler</h3>
-                        <p>Heyecan verici daha fazlası çok yakında</p>
-                        <span class="coming-tag">Yakında</span>
+
+                    <div class="coming-app-item">
+                        <div class="coming-app-icon coming-app-cyan">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <h3>Stok & Montaj</h3>
+                        <p>Stok ve montaj takibi</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="why-section">
+    <section id="hakkimizda" class="why-section">
         <div class="container">
             <span class="section-label">NEDEN OZATA</span>
             <h2 class="section-title">Her Detayda Mükemmellik</h2>
@@ -312,7 +176,7 @@
             <div class="why-grid">
                 <div class="why-card">
                     <div class="why-icon">
-                        <i class="far fa-shield-check"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Güvenli</h3>
                     <p>Verileriniz uçtan uca şifreleme ile korunur.</p>
@@ -320,7 +184,7 @@
 
                 <div class="why-card">
                     <div class="why-icon">
-                        <i class="far fa-mobile"></i>
+                        <i class="fas fa-mobile-screen"></i>
                     </div>
                     <h3>Modern</h3>
                     <p>Son teknolojilerle tasarlanmış şık arayüz.</p>
@@ -328,7 +192,7 @@
 
                 <div class="why-card">
                     <div class="why-icon">
-                        <i class="far fa-bolt"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Hızlı</h3>
                     <p>Milisaniyeler içinde yanıt veren altyapı.</p>
@@ -336,7 +200,7 @@
 
                 <div class="why-card">
                     <div class="why-icon">
-                        <i class="far fa-cloud"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Bulut Senkronizasyonu</h3>
                     <p>Tüm cihazlarınızda anlık senkronizasyon.</p>
@@ -361,21 +225,21 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>E-posta</h4>
-                            <p>info@ozata.com</p>
+                            <p>ozata.apps@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="far fa-map-marker-alt"></i></div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Konum</h4>
                             <p>Türkiye</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="far fa-clock"></i></div>
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
                             <h4>Çalışma Saatleri</h4>
                             <p>Pzt - Cuma: 09:00 - 18:00</p>
@@ -407,9 +271,9 @@
                         <label>Mesajınız</label>
                         <textarea name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">
+                    <button type="submit" class="btn-submit magnetic">
                         <span>Mesaj Gönder</span>
-                        <i class="far fa-paper-plane"></i>
+                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
@@ -422,21 +286,7 @@
                 <div class="footer-glow"></div>
             </div>
             <div class="footer-logo-wrap">
-                <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#7C4DFF"/>
-                            <stop offset="50%" stop-color="#6D5BFF"/>
-                            <stop offset="100%" stop-color="#5EDCFF"/>
-                        </linearGradient>
-                        <linearGradient id="footerGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#6D5BFF"/>
-                            <stop offset="100%" stop-color="#5EDCFF"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#footerGrad)" stroke-width="6"/>
-                    <path d="M 60 80 L 140 80 L 100 130 L 140 130" fill="none" stroke="url(#footerGrad2)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/images/logo.png" alt="OZATA" class="footer-logo">
                 <p class="footer-powered">POWERED BY OZATA</p>
                 <p class="footer-slogan">SİHİR GİBİ PRATİK,<br>GERÇEKÇİ ÇÖZÜMLER</p>
             </div>
@@ -465,6 +315,6 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
