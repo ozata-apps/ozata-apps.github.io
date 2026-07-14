@@ -15,6 +15,8 @@
 </head>
 <body>
 
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">OZATA</a>
@@ -34,18 +36,24 @@
 
     <section id="hero" class="hero">
         <div class="hero-bg">
+            <div class="aurora aurora-1"></div>
+            <div class="aurora aurora-2"></div>
+            <div class="aurora aurora-3"></div>
+            <div class="mesh-gradient"></div>
             <div class="hero-glow glow-1"></div>
             <div class="hero-glow glow-2"></div>
+            <div class="hero-glow glow-3"></div>
+            <div class="noise-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
             <div class="hero-waves">
                 <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
                     <path class="wave wave-1" d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,128C672,117,768,139,864,160C960,181,1056,203,1152,192C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     <path class="wave wave-2" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
-            <div class="stars"></div>
         </div>
 
-        <div class="hero-content">
+        <div class="hero-content" data-parallax="0.3">
             <div class="hero-logo-wrap">
                 <div class="hero-logo-glow"></div>
                 <img src="assets/images/logo.png" alt="OZATA" class="hero-logo">
@@ -53,7 +61,16 @@
             <p class="hero-powered">POWERED BY OZATA</p>
             <h1 class="hero-title">SİHİR GİBİ PRATİK,<br>GERÇEKÇİ ÇÖZÜMLER</h1>
             <p class="hero-desc">Akıllı mobil uygulamalar geliştiriyoruz.</p>
-            <a href="#urunler" class="hero-cta">Uygulamaları Keşfet</a>
+            <div class="hero-buttons">
+                <a href="#" class="btn-google magnetic">
+                    <i class="fab fa-google-play"></i>
+                    <span>Google Play</span>
+                </a>
+                <a href="#urunler" class="btn-outline magnetic">
+                    <span>Uygulamaları Keşfet</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
 
         <div class="scroll-indicator">
@@ -62,21 +79,22 @@
     </section>
 
     <section id="urunler" class="product-section product-finance">
+        <div class="section-bg-glow"></div>
         <div class="product-container">
-            <div class="product-text">
+            <div class="product-text" data-parallax="0.1">
                 <span class="product-label">FİNANS</span>
                 <h2 class="product-title">Muhasebecim</h2>
                 <p class="product-desc">Gelir ve giderlerinizi kolayca yönetin. Finansal özgürlüğe giden yolda sizinle birlikte.</p>
                 <div class="product-buttons">
-                    <a href="#" class="btn-google">
+                    <a href="#" class="btn-google magnetic">
                         <i class="fab fa-google-play"></i>
                         <span>Google Play</span>
                     </a>
                     <a href="#" class="btn-outline">Detaylı incele</a>
                 </div>
             </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
+            <div class="product-visual" data-parallax="0.2">
+                <div class="phone-mockup phone-hover">
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
                         <div class="app-screen app-muhasebecim">
@@ -91,7 +109,7 @@
                             <div class="app-stats-row">
                                 <div class="app-stat">
                                     <span class="app-stat-label">Gelir</span>
-                                    <span class="app-stat-value income">₺ 45.750,00</span>
+                                    <span class="app-stat-value income"> 45.750,00</span>
                                 </div>
                                 <div class="app-stat">
                                     <span class="app-stat-label">Gider</span>
@@ -126,21 +144,22 @@
     </section>
 
     <section class="product-section product-health">
+        <div class="section-bg-glow"></div>
         <div class="product-container reverse">
-            <div class="product-text">
+            <div class="product-text" data-parallax="0.1">
                 <span class="product-label">SAĞLIK</span>
                 <h2 class="product-title">MedTak</h2>
                 <p class="product-desc">İlaç takibinizi kolaylaştırır. Zamanında hatırlatmalarla sağlığınız hep güvende.</p>
                 <div class="product-buttons">
-                    <a href="#" class="btn-google btn-google-blue">
+                    <a href="#" class="btn-google btn-google-blue magnetic">
                         <i class="fab fa-google-play"></i>
                         <span>Google Play</span>
                     </a>
                     <a href="#" class="btn-outline">Detaylı incele</a>
                 </div>
             </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
+            <div class="product-visual" data-parallax="0.2">
+                <div class="phone-mockup phone-hover">
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
                         <div class="app-screen app-medtak">
@@ -188,21 +207,16 @@
     </section>
 
     <section class="product-section product-shopping">
-        <div class="product-container">
-            <div class="product-text">
+        <div class="section-bg-glow"></div>
+        <div class="product-container centered">
+            <div class="product-text-full">
                 <span class="product-label">ALIŞVERİŞ</span>
                 <h2 class="product-title">CoupleList</h2>
-                <p class="product-desc">Sevdiklerinizle alışverişi paylaşın. Ortak listeniz her zaman senkronize kalsın.</p>
-                <div class="product-buttons">
-                    <a href="#" class="btn-google btn-google-purple">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
-                    </a>
-                    <a href="#" class="btn-outline">Detaylı incele</a>
-                </div>
+                <p class="product-desc centered">Sevdiklerinizle alışverişi paylaşın. Ortak listeniz her zaman senkronize kalsın.</p>
             </div>
-            <div class="product-visual">
-                <div class="phone-mockup">
+            <div class="product-visual-centered">
+                <div class="center-glow"></div>
+                <div class="phone-mockup phone-hover large">
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
                         <div class="app-screen app-couplelist">
@@ -241,46 +255,69 @@
                     </div>
                 </div>
             </div>
+            <div class="product-buttons-centered">
+                <a href="#" class="btn-google btn-google-purple magnetic">
+                    <i class="fab fa-google-play"></i>
+                    <span>Google Play</span>
+                </a>
+                <a href="#" class="btn-outline">Detaylı incele</a>
+            </div>
         </div>
     </section>
 
     <section class="coming-soon-section">
-        <div class="container">
-            <span class="section-label-coming">YAKINDA</span>
-            <h2 class="section-title-coming">Yeni Uygulamalar Yolda</h2>
-            <p class="section-desc-coming">Sizin için yeni projeler üzerinde çalışıyoruz.</p>
+        <div class="coming-bg">
+            <div class="coming-glow"></div>
+            <div class="coming-noise"></div>
+        </div>
+        <div class="container coming-container">
+            <div class="coming-massive-text">YAKINDA</div>
+            <div class="coming-content">
+                <span class="section-label-coming">YENİ UYGULAMALAR YOLDA</span>
+                <p class="section-desc-coming">Sizin için yeni projeler üzerinde çalışıyoruz.</p>
 
-            <div class="coming-grid">
-                <div class="coming-card coming-card-purple">
-                    <div class="coming-icon">
-                        <i class="fas fa-utensils"></i>
+                <div class="coming-logos">
+                    <div class="coming-logo-item">
+                        <div class="coming-logo-icon coming-logo-purple">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span class="coming-logo-name">Mutfak Günlüğüm</span>
                     </div>
-                    <div class="coming-info">
-                        <h3>Mutfak Günlüğüm</h3>
-                        <p>Lezzetli tarifler ve daha fazlası</p>
-                        <span class="coming-tag">Yakında</span>
+                    <div class="coming-logo-item">
+                        <div class="coming-logo-icon coming-logo-blue">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <span class="coming-logo-name">Eğitim Oyunları</span>
+                    </div>
+                    <div class="coming-logo-item">
+                        <div class="coming-logo-icon coming-logo-pink">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span class="coming-logo-name">Yeni Projeler</span>
                     </div>
                 </div>
 
-                <div class="coming-card coming-card-blue">
-                    <div class="coming-icon">
-                        <i class="fas fa-gamepad"></i>
+                <div class="coming-cards">
+                    <div class="coming-card coming-card-purple">
+                        <div class="coming-info">
+                            <h3>Mutfak Günlüğüm</h3>
+                            <p>Lezzetli tarifler ve daha fazlası</p>
+                            <span class="coming-tag">Yakında</span>
+                        </div>
                     </div>
-                    <div class="coming-info">
-                        <h3>Eğitim Oyunları</h3>
-                        <p>Çocuklar için eğlenceli ve öğretici oyunlar</p>
-                        <span class="coming-tag">Yakında</span>
+                    <div class="coming-card coming-card-blue">
+                        <div class="coming-info">
+                            <h3>Eğitim Oyunları</h3>
+                            <p>Çocuklar için eğlenceli ve öğretici oyunlar</p>
+                            <span class="coming-tag">Yakında</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="coming-card coming-card-pink">
-                    <div class="coming-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="coming-info">
-                        <h3>Yeni Projeler</h3>
-                        <p>Heyecan verici daha fazlası çok yakında</p>
-                        <span class="coming-tag">Yakında</span>
+                    <div class="coming-card coming-card-pink">
+                        <div class="coming-info">
+                            <h3>Yeni Projeler</h3>
+                            <p>Heyecan verici daha fazlası çok yakında</p>
+                            <span class="coming-tag">Yakında</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -390,7 +427,7 @@
                         <label>Mesajınız</label>
                         <textarea name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">
+                    <button type="submit" class="btn-submit magnetic">
                         <span>Mesaj Gönder</span>
                         <i class="far fa-paper-plane"></i>
                     </button>
