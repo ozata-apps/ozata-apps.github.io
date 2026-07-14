@@ -1,165 +1,130 @@
-// Mobile Navigation
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links li');
-
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    
-    // Burger Animation
-    burger.classList.toggle('toggle');
+// Navbar scroll efekti
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
-// Close mobile menu when clicking on a link
-navLinks.forEach(link => {
+// Mobile menu
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Menü linkine tıklayınca kapat
+document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        nav.classList.remove('active');
+        burger.classList.remove('active');
+        navLinks.classList.remove('active');
     });
 });
 
-// Smooth scrolling for navigation links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offset = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
-    } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// Scroll reveal animation
-const scrollReveal = () => {
-    const elements = document.querySelectorAll('.project-card, .skill-category, .stat-item, .about-text');
-    
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight - 100) {
-            element.classList.add('scroll-reveal', 'active');
-        }
-    });
+// Scroll reveal animasyonu
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
-window.addEventListener('scroll', scrollReveal);
-window.addEventListener('load', scrollReveal);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
 
-// Contact form handling
+document.querySelectorAll('.product-card, .feature-card, .contact-item, .mission-text, .mission-visual').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+});
+
+// Form gönderimi
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Form verilerini topla
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
-        // Burada normalde bir backend'e POST isteği gönderilir
-        // GitHub Pages statik olduğu için şimdilik alert gösteriyoruz
-        alert('Mesajınız alındı! En kısa sürede size dönüş yapacağım.');
+        // Formspree entegrasyonu için:
+        // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(data)
+        // })
+        
+        alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
         contactForm.reset();
-        
-        // Alternatif olarak Formspree kullanabilirsiniz:
-        // action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
     });
 }
 
-// Active navigation link on scroll
-const sections = document.querySelectorAll('section');
-const navLinksActive = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinksActive.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Typing effect for hero section (opsiyonel)
-const tagline = document.querySelector('.tagline');
-if (tagline) {
-    const text = tagline.textContent;
-    tagline.textContent = '';
-    let i = 0;
-    
-    const typeWriter = () => {
-        if (i < text.length) {
-            tagline.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    };
-    
-    // Başlangıçta başlat
-    setTimeout(typeWriter, 1000);
-}
-
-// Counter animation for stats
+// İstatistik sayaç animasyonu
 const animateCounter = (element) => {
-    const target = parseInt(element.textContent);
-    const suffix = element.textContent.replace(/[0-9]/g, '');
-    let count = 0;
-    const increment = target / 50;
+    const text = element.textContent;
+    const match = text.match(/[\d.]+/);
+    if (!match) return;
     
-    const updateCounter = () => {
-        if (count < target) {
-            count += increment;
-            element.textContent = Math.ceil(count) + suffix;
-            setTimeout(updateCounter, 30);
-        } else {
-            element.textContent = target + suffix;
+    const target = parseFloat(match[0]);
+    const suffix = text.replace(match[0], '');
+    const isDecimal = text.includes('.');
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+    const stepTime = duration / steps;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
         }
-    };
-    
-    updateCounter();
+        
+        const displayValue = isDecimal ? current.toFixed(1) : Math.floor(current);
+        element.textContent = displayValue + suffix;
+    }, stepTime);
 };
 
-// Stats counter animation on scroll
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-item h3');
-            statNumbers.forEach(stat => {
+            const stats = entry.target.querySelectorAll('.stat strong');
+            stats.forEach(stat => {
                 if (!stat.classList.contains('counted')) {
                     stat.classList.add('counted');
                     animateCounter(stat);
                 }
             });
+            statsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) {
+    statsObserver.observe(heroStats);
 }
