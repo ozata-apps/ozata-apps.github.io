@@ -1147,7 +1147,6 @@ body:hover .cursor-glow { opacity: 1; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--purple); }
-
 /* App Screenshot */
 .app-screenshot {
     width: 100%;
@@ -1417,21 +1416,21 @@ body:hover .cursor-glow { opacity: 1; }
    Splash Video Preloader
 =========================== */
 
-#preloader {
-    position: fixed;
-    inset: 0;
-    background: #050816;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999999;
-    transition: opacity .8s ease, visibility .8s ease;
+#preloader{
+    position:fixed;
+    inset:0;
+    background:#050816;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    transition:opacity .8s ease, visibility .8s ease;
 }
 
-#preloader.hide {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+#preloader.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
 }
 
 #preloader video {
