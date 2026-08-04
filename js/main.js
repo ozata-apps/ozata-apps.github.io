@@ -1435,16 +1435,13 @@ button {
         const video = document.getElementById('splashVideo');
         const btn = document.getElementById('splashStartBtn');
 
-        // Daha önce izlendiyse direkt geç
         if (localStorage.getItem(SPLASH_KEY) === 'true') {
             preloader.style.display = 'none';
             return;
         }
 
-        // Video yüklenme hatası olursa siteyi yine de aç
         video.addEventListener('error', hidePreloader);
 
-        // Butona tıklanınca videoyu sesli başlat
         btn.addEventListener('click', () => {
             video.muted = false;
             video.volume = 1.0;
@@ -1453,11 +1450,9 @@ button {
 
             if (playPromise !== undefined) {
                 playPromise.then(() => {
-                    // Video başarıyla oynatıldı
                     preloader.classList.add('playing');
                 }).catch(err => {
                     console.log('Otomatik oynatma engellendi:', err);
-                    // Fallback: sessiz başlat
                     video.muted = true;
                     video.play();
                     preloader.classList.add('playing');
@@ -1465,10 +1460,8 @@ button {
             }
         });
 
-        // Video bitince preloader'ı gizle ve kaydet
         video.addEventListener('ended', hidePreloader);
 
-        // ESC ile atlama (isteğe bağlı)
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !preloader.classList.contains('hide')) {
                 hidePreloader();
@@ -1481,7 +1474,6 @@ button {
             preloader.classList.add('hide');
             localStorage.setItem(SPLASH_KEY, 'true');
 
-            // Animasyon bittikten sonra tamamen kaldır
             setTimeout(() => {
                 preloader.style.display = 'none';
                 video.pause();
@@ -1489,7 +1481,6 @@ button {
             }, 800);
         }
 
-        // Video metadata yüklenmeden preloader gösterilmesin
         video.preload = 'auto';
     });
 })();
