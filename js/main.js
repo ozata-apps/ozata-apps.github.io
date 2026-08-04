@@ -1420,6 +1420,7 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--purple);
 }
+
 /* ===========================
    Splash Video Controller
 =========================== */
@@ -1492,4 +1493,3 @@ button {
         video.preload = 'auto';
     });
 })();
-
