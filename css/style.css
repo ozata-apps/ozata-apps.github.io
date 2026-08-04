@@ -1444,13 +1444,7 @@ body:hover .cursor-glow { opacity: 1; }
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-/* Mobil cihazlarda video uyumluluğu */
-@media (max-width: 768px) {
-    #preloader video {
-        object-fit: contain;
-        background: #050816; /* Siyah boşlukları doldur */
-    }
-}
+
 
 #preloader.playing video {
     opacity: 1;
