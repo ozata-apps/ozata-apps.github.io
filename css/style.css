@@ -18,9 +18,6 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ALMENDA FONT EKLENDİ */
-@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
-
 html { scroll-behavior: smooth; }
 
 body {
