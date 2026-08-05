@@ -21,12 +21,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 "OvTz3Iuh_cncLLF2Q"
             );
 
-            alert("✅ Mesajınız başarıyla iletildi.");
+            const messageBox = document.getElementById("formMessage");
+
+            messageBox.className = "form-message success";
+            messageBox.textContent = "✅ Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.";
+
             contactForm.reset();
+
+            setTimeout(() => {
+                messageBox.className = "form-message";
+                messageBox.textContent = "";
+            }, 4000);
 
         } catch (err) {
             console.error(err);
-            alert("❌ Mesaj gönderilemedi.");
+            const messageBox = document.getElementById("formMessage");
+
+            messageBox.className = "form-message error";
+            messageBox.textContent = "❌ Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.";
+
+            setTimeout(() => {
+                messageBox.className = "form-message";
+                messageBox.textContent = "";
+            }, 4000);
         }
 
         submitBtn.disabled = false;
