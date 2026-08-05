@@ -1434,7 +1434,7 @@ body:hover .cursor-glow { opacity: 1; }
     pointer-events:none;
 }
 
- {
+#preloader video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1444,7 +1444,6 @@ body:hover .cursor-glow { opacity: 1; }
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
 
 #preloader.playing video {
     opacity: 1;
@@ -1539,6 +1538,12 @@ body:hover .cursor-glow { opacity: 1; }
     }
 }
 
+/* Eski efektler KALDIRILDI:
+   - ::before (ışık hüzmesi)
+   - ::after (neon parıltı)
+   - splash-pulse animasyonu
+   - pulseGlow
+*/
 
 .splash-hint {
     font-size: 0.8rem;
