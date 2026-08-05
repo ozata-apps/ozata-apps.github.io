@@ -1420,35 +1420,3 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--purple);
 }
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const submitBtn = contactForm.querySelector("button[type='submit']");
-        const originalText = submitBtn.innerHTML;
-
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = "⏳ Gönderiliyor...";
-
-        emailjs.sendForm(
-            "service_qr4xdqu",
-            "template_zin1z9a",
-            contactForm
-        )
-        .then(() => {
-            alert("✅ Mesajınız başarıyla iletildi. En kısa sürede size dönüş yapacağız.");
-            contactForm.reset();
-        })
-        .catch((error) => {
-            console.error(error);
-            alert("❌ Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.");
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        });
-    });
-}
