@@ -16,7 +16,17 @@
             source.src = "assets/video/splash_video.mp4";
         }
 
-        video.load();           
+        video.load();  
+
+        window.addEventListener("resize", () => {
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                source.src = "assets/video/splash_video_mobile.mp4";
+            } else {
+                source.src = "assets/video/splash_video.mp4";
+            }
+
+            video.load();
+        });
 
         if (localStorage.getItem(SPLASH_KEY) === 'true') {
             preloader.style.display = 'none';
