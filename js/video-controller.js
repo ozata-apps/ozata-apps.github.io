@@ -7,6 +7,16 @@
 
         const video = document.getElementById('splashVideo');
         const btn = document.getElementById('splashStartBtn');
+   
+        const source = video.querySelector("source");
+
+        if (window.matchMedia("(orientation: portrait)").matches) {
+            source.src = "assets/video/splash_video_mobile.mp4";
+        } else {
+            source.src = "assets/video/splash_video.mp4";
+        }
+
+        video.load();           
 
         if (localStorage.getItem(SPLASH_KEY) === 'true') {
             preloader.style.display = 'none';
