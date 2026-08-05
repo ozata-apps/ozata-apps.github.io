@@ -29,7 +29,7 @@
             video.load();
         });
 
-        if (localStorage.getItem(SPLASH_KEY) === 'true') {
+        if (storage.getItem(SPLASH_KEY) === 'true') {
             preloader.style.display = 'none';
             return;
         }
@@ -271,7 +271,7 @@
             if (preloader.classList.contains('hide')) return;
 
             preloader.classList.add('hide');
-            localStorage.setItem(SPLASH_KEY, 'true');
+            storage.setItem(SPLASH_KEY, 'true');
 
             setTimeout(() => {
                 preloader.style.display = 'none';
