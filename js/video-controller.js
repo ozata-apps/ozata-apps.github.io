@@ -1,5 +1,6 @@
 (function() {
     const SPLASH_KEY = 'ozata_splash_watched';
+    const storage = sessionStorage;
 
     window.addEventListener('DOMContentLoaded', () => {
         const preloader = document.getElementById('preloader');
