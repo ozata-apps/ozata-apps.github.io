@@ -3,17 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!contactForm) return;
 
-    // URL'den kaynak bilgisini al
-    const urlParams = new URLSearchParams(window.location.search);
-    const source = urlParams.get("source") || "OZATA Web Sitesi";
-
-    // Kaynak bilgisini forma yaz
-    const sourceInput = document.getElementById("formSource");
-
-    if (sourceInput) {
-        sourceInput.value = source;
-    }
-
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -24,10 +13,27 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.innerHTML = "⏳ Gönderiliyor...";
 
         try {
-            await emailjs.sendForm(
+            // Formdaki bilgileri al
+            const name = contactForm.querySelector("[name='name']").value;
+            const email = contactForm.querySelector("[name='email']").value;
+            const subject = contactForm.querySelector("[name='subject']").value;
+            const message = contactForm.querySelector("[name='message']").value;
+
+            // URL'deki source bilgisini al
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get("source") || "OZATA Web Sitesi";
+
+            // EmailJS'e değerleri açıkça gönder
+            await emailjs.send(
                 "service_qr4xdqu",
                 "template_zin1z9a",
-                contactForm,
+                {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    source: source
+                },
                 "OvTz3Iuh_cncLLF2Q"
             );
 
@@ -39,18 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             contactForm.reset();
 
-            // Reset sonrası source değerini tekrar ayarla
-            if (sourceInput) {
-                sourceInput.value = source;
-            }
-
             setTimeout(() => {
                 messageBox.className = "form-message";
                 messageBox.textContent = "";
             }, 4000);
 
         } catch (err) {
-            console.error(err);
+            console.error("EmailJS Hatası:", err);
 
             const messageBox = document.getElementById("formMessage");
 
