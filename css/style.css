@@ -968,7 +968,7 @@ body:hover .cursor-glow { opacity: 1; }
     font-size: 0.95rem;
     transition: var(--transition);
 }
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--purple);
 }
@@ -1537,13 +1537,6 @@ body:hover .cursor-glow { opacity: 1; }
         opacity: 0;
     }
 }
-
-/* Eski efektler KALDIRILDI:
-   - ::before (ışık hüzmesi)
-   - ::after (neon parıltı)
-   - splash-pulse animasyonu
-   - pulseGlow
-*/
 
 .splash-hint {
     font-size: 0.8rem;
