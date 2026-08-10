@@ -958,9 +958,7 @@ body:hover .cursor-glow { opacity: 1; }
     color: var(--text-soft);
 }
 .form-group input,
-.form-group select {
-    cursor: pointer;
-}
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
@@ -977,6 +975,9 @@ body:hover .cursor-glow { opacity: 1; }
 .form-group textarea:focus {
     outline: none;
     border-color: var(--purple);
+}
+.form-group select {
+    cursor: pointer;
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .btn-submit {
