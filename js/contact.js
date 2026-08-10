@@ -3,6 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!contactForm) return;
 
+    // URL'den kaynak bilgisini al
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get("source") || "OZATA Web Sitesi";
+
+    // Kaynak bilgisini forma gizli olarak ekle
+    let sourceInput = contactForm.querySelector("input[name='source']");
+
+    if (!sourceInput) {
+        sourceInput = document.createElement("input");
+        sourceInput.type = "hidden";
+        sourceInput.name = "source";
+        contactForm.appendChild(sourceInput);
+    }
+
+    sourceInput.value = source;
+
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -27,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "✅ Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.";
 
             contactForm.reset();
+
+            // Form resetlendiği için source bilgisini tekrar ekle
+            sourceInput.value = source;
 
             setTimeout(() => {
                 messageBox.className = "form-message";
