@@ -13,27 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.innerHTML = "⏳ Gönderiliyor...";
 
         try {
-            // Formdaki bilgileri al
-            const name = contactForm.querySelector("[name='name']").value;
-            const email = contactForm.querySelector("[name='email']").value;
-            const subject = contactForm.querySelector("[name='subject']").value;
-            const message = contactForm.querySelector("[name='message']").value;
-
-            // URL'deki source bilgisini al
-            const urlParams = new URLSearchParams(window.location.search);
-            const source = urlParams.get("source") || "OZATA Web Sitesi";
-
-            // EmailJS'e değerleri açıkça gönder
-            await emailjs.send(
+            await emailjs.sendForm(
                 "service_qr4xdqu",
                 "template_zin1z9a",
-                {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    source: source
-                },
+                contactForm,
                 "OvTz3Iuh_cncLLF2Q"
             );
 
@@ -51,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 4000);
 
         } catch (err) {
-            console.error("EmailJS Hatası:", err);
+            console.error(err);
 
             const messageBox = document.getElementById("formMessage");
 
