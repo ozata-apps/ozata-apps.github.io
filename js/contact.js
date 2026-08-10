@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const source = urlParams.get("source") || "OZATA Web Sitesi";
 
-    // Kaynak bilgisini forma ekle
+    // Kaynak bilgisini forma gizli olarak ekle
     let sourceInput = contactForm.querySelector("input[name='source']");
 
     if (!sourceInput) {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             contactForm.reset();
 
-            // reset sonrası kaynak bilgisini tekrar ekle
+            // Form resetlendiği için source bilgisini tekrar ekle
             sourceInput.value = source;
 
             setTimeout(() => {
