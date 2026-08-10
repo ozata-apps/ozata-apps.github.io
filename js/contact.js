@@ -1,8 +1,23 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contactForm");
 
     if (!contactForm) return;
+
+    // URL'den kaynak bilgisini al
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get("source") || "OZATA Web Sitesi";
+
+    // Kaynak bilgisini forma ekle
+    let sourceInput = contactForm.querySelector("input[name='source']");
+
+    if (!sourceInput) {
+        sourceInput = document.createElement("input");
+        sourceInput.type = "hidden";
+        sourceInput.name = "source";
+        contactForm.appendChild(sourceInput);
+    }
+
+    sourceInput.value = source;
 
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -24,9 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const messageBox = document.getElementById("formMessage");
 
             messageBox.className = "form-message success";
-            messageBox.textContent = "✅ Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.";
+            messageBox.textContent =
+                "✅ Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.";
 
             contactForm.reset();
+
+            // reset sonrası kaynak bilgisini tekrar ekle
+            sourceInput.value = source;
 
             setTimeout(() => {
                 messageBox.className = "form-message";
@@ -35,10 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (err) {
             console.error(err);
+
             const messageBox = document.getElementById("formMessage");
 
             messageBox.className = "form-message error";
-            messageBox.textContent = "❌ Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.";
+            messageBox.textContent =
+                "❌ Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.";
 
             setTimeout(() => {
                 messageBox.className = "form-message";
