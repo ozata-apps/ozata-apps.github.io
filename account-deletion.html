@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Muhasebecim Hesap ve Veri Silme Talebi | OZATA</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050816;
+    color:#f5f7ff;
+    line-height:1.8;
+    max-width:950px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h1{
+    text-align:center;
+    color:#7B2EFF;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+h2{
+    color:#00C8FF;
+    margin-top:40px;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+p{
+    margin-bottom:18px;
+    color:#d8dcef;
+}
+
+ul{
+    margin-left:25px;
+    margin-bottom:20px;
+}
+
+li{
+    margin-bottom:8px;
+    color:#d8dcef;
+}
+
+strong{
+    color:#f5f7ff;
+}
+
+a{
+    color:#5EDCFF;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    margin-bottom:30px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#7B2EFF,#00C8FF);
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(123,46,255,.35);
+    text-decoration:none;
+}
+
+.notice-box{
+    background:rgba(123,46,255,.12);
+    border:1px solid rgba(123,46,255,.4);
+    border-radius:12px;
+    padding:16px 20px;
+    margin-bottom:24px;
+    color:#d8dcef;
+}
+
+.contact-form{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    padding:28px;
+    margin-top:10px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:600;
+    color:#f5f7ff;
+    margin-bottom:8px;
+}
+
+.form-group input[type="email"],
+.form-group textarea{
+    width:100%;
+    padding:12px 16px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);
+    color:#f5f7ff;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#7B2EFF;
+    box-shadow:0 0 0 3px rgba(123,46,255,.2);
+}
+
+.form-group.checkbox-group{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.form-group.checkbox-group input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    margin-top:4px;
+    accent-color:#7B2EFF;
+    flex-shrink:0;
+}
+
+.form-group.checkbox-group label{
+    font-weight:400;
+    color:#d8dcef;
+    cursor:pointer;
+}
+
+.btn-submit{
+    width:100%;
+    padding:14px 24px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#7B2EFF,#00C8FF);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.btn-submit:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(123,46,255,.35);
+}
+
+.btn-submit:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.form-message{
+    margin-top:16px;
+    padding:12px 16px;
+    border-radius:10px;
+    font-weight:600;
+    display:none;
+}
+
+.form-message.success{
+    display:block;
+    background:rgba(74,222,128,.12);
+    border:1px solid rgba(74,222,128,.4);
+    color:#4ADE80;
+}
+
+.form-message.error{
+    display:block;
+    background:rgba(248,113,113,.12);
+    border:1px solid rgba(248,113,113,.4);
+    color:#F87171;
+}
+
+.footer{
+    margin-top:60px;
+    text-align:center;
+    opacity:.8;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">
+    🏠 Ana Sayfaya Dön
+</a>
+
+<h1>Muhasebecim Hesap ve Veri Silme Talebi</h1>
+
+<p><strong>Son Güncelleme:</strong> 15 Ağustos 2026</p>
+
+<div class="notice-box">
+    <strong>Önemli:</strong> Bu işlem yalnızca <strong>Muhasebecim</strong> uygulamasındaki hesabınızı ve bu hesapla ilişkili uygulama verilerinizi siler. <strong>Google hesabınızın kendisi silinmez.</strong>
+</div>
+
+<h2>Muhasebecim Hesabınızı Nasıl Silebilirsiniz?</h2>
+
+<p>
+Hesabınızı ve ilişkili tüm verilerinizi iki şekilde silebilirsiniz:
+</p>
+
+<ul>
+    <li><strong>Uygulama içinden (önerilen):</strong> Muhasebecim uygulamasında <strong>Profil/Ayarlar → Hesabı Sil</strong> yolunu izleyin. İşlem sırasında iki kez onay istenir. Silme tamamlandığında uygulama giriş ekranına döner.</li>
+    <li><strong>Web üzerinden talep:</strong> Uygulamaya erişemiyorsanız aşağıdaki formu kullanarak hesap silme talebinde bulunabilirsiniz. Talebiniz doğrulandıktan sonra en geç 30 gün içinde işleme alınır.</li>
+</ul>
+
+<h2>Hangi Veriler Silinir?</h2>
+
+<p>Hesap silme işlemi aşağıdaki verileri siler:</p>
+
+<ul>
+    <li><strong>Yerel (cihaz) verileri:</strong> Muhasebecim'in cihazınızda sakladığı tüm uygulama verileri (gelir-gider kayıtları, kart bilgileri, bekleyen senkronizasyon kayıtları).</li>
+    <li><strong>Google Drive yedekleri:</strong> Uygulamanın sizin Google Drive hesabınızın özel uygulama verisi (appDataFolder) alanında sakladığı <strong>yalnızca size ait</strong> Muhasebecim yedek dosyası.</li>
+</ul>
+
+<h2>Hangi Veriler Silinmez?</h2>
+
+<ul>
+    <li><strong>Google hesabınız:</strong> Muhasebecim hesap silme işlemi Google hesabınızı silmez. Uygulamadaki Google oturumunuz kapatılır; Google hesabınız ve diğer Google hizmetlerindeki verileriniz etkilenmez.</li>
+    <li><strong>Google Drive'daki diğer dosyalarınız:</strong> Yalnızca Muhasebecim'in kendi oluşturduğu, size ait tek yedek dosyası silinir. Drive'ınızdaki diğer hiçbir dosyaya dokunulmaz.</li>
+</ul>
+
+<h2>Verilerin Saklanma Süresi</h2>
+
+<p>
+OZATA, Muhasebecim kullanıcı verilerini kendi sunucularında <strong>saklamaz</strong>. Verileriniz yalnızca sizin Google Drive hesabınızda ve cihazınızda bulunur; bu nedenle OZATA tarafında silinecek veya saklanacak ayrı bir veri yoktur.
+</p>
+
+<p>
+Yürürlükteki yasaların gerektirdiği durumlarda (örneğin yetkili kurum talepleri) yalnızca yasal zorunluluk süresince ve yalnızca yasanın öngördüğü kapsamda bilgi saklanabilir.
+</p>
+
+<h2>Web Üzerinden Hesap Silme Talebi</h2>
+
+<p>
+Uygulamaya erişemiyorsanız, aşağıdaki formu doldurarak hesap silme talebinizi bize iletebilirsiniz. Talebiniz, kayıtlı e-posta adresiyle eşleştiği doğrulandıktan sonra işleme alınır.
+</p>
+
+<form class="contact-form" id="accountDeletionForm">
+    <input type="hidden" name="source" value="Hesap Silme Sayfası">
+    <input type="hidden" name="name" value="Hesap Silme Talebi">
+    <input type="hidden" name="subject" value="Hesap Silme Talebi (Muhasebecim)">
+
+    <div class="form-group">
+        <label>E-posta adresiniz</label>
+        <input type="email" name="email" placeholder="ornek@eposta.com" required>
+    </div>
+
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="silmeOnayi" name="onay" required>
+        <label for="silmeOnayi">Bu hesabın ve Muhasebecim ile ilişkili verilerimin silinmesini talep ediyorum.</label>
+    </div>
+
+    <input type="hidden" name="message">
+
+    <button type="submit" class="btn-submit">
+        <span>Silme Talebini Gönder</span>
+    </button>
+</form>
+
+<div id="formMessage" class="form-message"></div>
+
+<div class="footer">
+    © 2026 OZATA. Tüm hakları saklıdır.
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init({
+    publicKey: "OvTz3Iuh_cncLLF2Q",
+});
+</script>
+<script src="js/account-deletion.js"></script>
+</body>
+</html>
