@@ -165,9 +165,12 @@ MedTak'ın işlediği tüm veriler yalnızca kullanıcının cihazında saklanı
 
 <ul>
 <li>İlaç bilgileri ve takip geçmişi, cihazdaki SQLite veritabanında tutulur.</li>
-<li>İlaç fotoğrafları, uygulamanın cihazdaki özel depolama alanında tutulur.</li>
 <li>Dil tercihi cihazda tutulur.</li>
 </ul>
+
+<p>
+İlaç fotoğrafı yalnızca kullanıcı tarafından seçildiğinde işlenir. Seçilen fotoğraf uygulamanın cihazdaki özel depolama alanına kopyalanır, MedTak'ın işlevi dışında kullanılmaz ve OZATA sunucularına veya üçüncü taraf bulut hizmetlerine gönderilmez.
+</p>
 
 <p>
 MedTak internet bağlantısı gerektirmez ve kullanıcı verilerini hiçbir sunucuya göndermez.
@@ -199,21 +202,21 @@ Kullanıcı hesabı, kayıt veya üyelik sistemi bulunmaz. Bu nedenle kimlik bil
 <h2>6. Verilerin Kullanım Amaçları</h2>
 
 <p>
-İşlenen bilgiler yalnızca aşağıdaki amaçlarla kullanılır:
+MedTak'ın işlediği bilgiler, ilaç bilgileri ve ilaç takip bilgileridir. Bu bilgiler yalnızca aşağıdaki amaçlarla kullanılır:
 </p>
 
 <ul>
-<li>İlaç hatırlatmalarının planlanması ve gösterilmesi</li>
-<li>Sesli hatırlatmaların yapılması</li>
-<li>İlaç takip geçmişinin gösterilmesi</li>
-<li>Uygulamanın doğru şekilde çalışmasının sağlanması</li>
+<li>İlaç hatırlatmalarının planlanması ve gösterilmesi (sesli hatırlatmalar dahil)</li>
+<li>İlaç alımının takip edilmesi</li>
+<li>Erteleme geçmişinin gösterilmesi</li>
+<li>Uygulamanın ilgili işlevlerinin sağlanması</li>
 </ul>
 
 <h2>7. Verilerin Paylaşılması</h2>
 
 <p>
 MedTak verileri satmaz, kiralamaz, pazarlama amacıyla kullanmaz veya üçüncü kişilerle paylaşmaz.
-Veriler cihaz dışına çıkmadığı için üçüncü bir tarafça erişilmesi de söz konusu değildir.
+MedTak, kullanıcı verilerini üçüncü taraflara aktarmak veya paylaşmak amacıyla bir sunucu hizmeti kullanmaz.
 Veriler yalnızca yürürlükteki yasal yükümlülüklerin gerektirdiği durumlarda yetkili resmi kurumlarla paylaşılabilir.
 </p>
 
@@ -246,7 +249,7 @@ MedTak şu anda kullanıcı davranışlarını analiz eden herhangi bir analitik
 </ul>
 
 <p>
-MedTak sunucu tarafında veri tutmadığı için, cihazdaki verilerin silinmesi kalıcıdır ve geri yüklenemez.
+MedTak sunucu tarafında veri tutmadığı için OZATA tarafında veri yedeği bulunmaz. Bu nedenle cihazdaki verilerin silinmesi kalıcıdır ve OZATA tarafından geri yükleme yapılamaz.
 </p>
 
 <h2>11. Veri Güvenliği</h2>
@@ -282,7 +285,7 @@ MedTak bir sağlık ve ilaç takip yardımcısı uygulamasıdır. Teşhis koymaz
 <h2>14. Çocukların Gizliliği</h2>
 
 <p>
-MedTak bilinçli olarak 13 yaşın altındaki çocuklardan kişisel veri toplamayı hedeflemez.
+MedTak belirli bir yaş grubuna yönelik değildir ve 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.
 </p>
 
 <h2>15. Gizlilik Politikasındaki Değişiklikler</h2>
