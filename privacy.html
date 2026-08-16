@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<a href="index.html" class="back-btn">
-    🏠 Ana Sayfaya Dön
-</a>
-<title>Gizlilik Politikası | OZATA</title>
+<meta name="description" content="OZATA uygulamaları için gizlilik politikaları. Muhasebecim ve MedTak uygulamalarına özel gizlilik politikalarını görüntüleyin.">
+<title>Gizlilik Politikaları | OZATA</title>
 
 <style>
 *{
@@ -76,6 +74,63 @@ a:hover{
 .back-btn:hover{
     transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(123,46,255,.35);
+    text-decoration:none;
+}
+.intro{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 10px;
+}
+.app-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:30px;
+}
+.app-card{
+    background:rgba(123,46,255,.08);
+    border:1px solid rgba(123,46,255,.25);
+    border-radius:16px;
+    padding:32px 24px;
+    text-align:center;
+    transition:.3s;
+}
+.app-card:hover{
+    transform:translateY(-4px);
+    border-color:#7B2EFF;
+    box-shadow:0 10px 24px rgba(123,46,255,.2);
+}
+.app-card h2{
+    margin-top:0;
+}
+.app-card .app-icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+.app-card p{
+    margin-bottom:22px;
+}
+.app-card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 24px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#7B2EFF,#00C8FF);
+    font-weight:600;
+    transition:.3s;
+}
+.app-card-link:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(123,46,255,.35);
+    text-decoration:none;
+}
+@media(max-width:700px){
+    .app-grid{
+        grid-template-columns:1fr;
+    }
 }
 .footer{
     margin-top:60px;
@@ -88,212 +143,38 @@ a:hover{
 </head>
 <body>
 
-<h1>Gizlilik Politikası</h1>
-
-<p><strong>Son Güncelleme:</strong> 05 Ağustos 2026</p>
-
-<p>
-Bu Gizlilik Politikası, <strong>OZATA</strong> tarafından geliştirilen mobil uygulamalar, web sitesi ve gelecekte sunulacak dijital hizmetler için geçerlidir.
-OZATA olarak kullanıcılarımızın gizliliğine saygı duyuyor ve kişisel verilerin güvenliğini önemsiyoruz.
-Bu politika; hangi bilgilerin işlendiğini, bu bilgilerin nasıl kullanıldığını, nasıl korunduğunu ve kullanıcıların sahip olduğu hakları açıklamaktadır.
-</p>
-
-<h2>1. Kapsam</h2>
-
-<p>
-Bu Gizlilik Politikası aşağıdaki uygulamalar dahil olmak üzere OZATA tarafından geliştirilen mevcut ve gelecekte yayınlanacak tüm uygulamalar için geçerlidir.
-</p>
-
-<ul>
-<li>Muhasebecim</li>
-<li>MedTak</li>
-<li>CoupleList</li>
-<li>Mutfak Günlüğüm</li>
-<li>Gelecekte yayınlanacak diğer OZATA uygulamaları</li>
-</ul>
-
-<h2>2. Toplanan Bilgiler</h2>
-
-<p>Uygulamalarımız aşağıdaki bilgileri işleyebilir:</p>
-
-<ul>
-<li>Google hesabı bilgileri (yalnızca kimlik doğrulama amacıyla)</li>
-<li>Kullanıcının uygulamaya girdiği veriler</li>
-<li>Uygulamanın çalışması için gerekli teknik bilgiler</li>
-</ul>
-
-<p>
-Kullanıcının uygulama içerisine girdiği bilgiler yalnızca uygulamanın sunduğu hizmetleri yerine getirmek amacıyla kullanılır.
-</p>
-
-<h2>3. Verilerin Saklanması</h2>
-
-<p>
-Kullanıcı verileri öncelikli olarak kullanıcının kendi Google Drive hesabında saklanır.
-</p>
-
-<p>
-İnternet bağlantısının bulunmadığı durumlarda veriler geçici olarak yalnızca kullanıcının cihazında yerel olarak saklanabilir.
-</p>
-
-<p>
-Bağlantı yeniden sağlandığında veriler otomatik olarak kullanıcının Google Drive hesabına senkronize edilir.
-Senkronizasyon başarıyla tamamlandıktan sonra geçici yerel kayıtlar otomatik olarak silinir.
-</p>
-
-<p>
-<strong>OZATA kullanıcı verilerini kendi sunucularında saklamaz.</strong>
-</p>
-
-<h2>4. Google Drive Kullanımı</h2>
-
-<p>
-Google Drive erişimi yalnızca kullanıcının açık izniyle sağlanır.
-</p>
-
-<p>
-Google Drive yalnızca aşağıdaki amaçlarla kullanılır:
-</p>
-
-<ul>
-<li>Verilerin yedeklenmesi</li>
-<li>Verilerin geri yüklenmesi</li>
-<li>Cihazlar arasında senkronizasyon sağlanması</li>
-</ul>
-
-<p>
-Uygulamalarımız yalnızca kendi oluşturduğu uygulama verilerine erişir.
-Google Drive üzerindeki diğer dosyalar görüntülenmez, değiştirilmez, paylaşılmaz veya işlenmez.
-</p>
-
-<h2>5. Google Hesabı</h2>
-
-<p>
-Google hesabı yalnızca güvenli kimlik doğrulama amacıyla kullanılır.
-</p>
-
-<p>
-Google hesabı bilgileri OZATA tarafından satılmaz, kiralanmaz veya pazarlama amacıyla üçüncü kişilerle paylaşılmaz.
-</p>
-
-<h2>6. Verilerin Kullanım Amaçları</h2>
-
-<ul>
-<li>Uygulamaların doğru şekilde çalışmasını sağlamak</li>
-<li>Verileri güvenli şekilde yedeklemek</li>
-<li>Cihazlar arasında senkronizasyon sağlamak</li>
-<li>Teknik sorunları tespit etmek ve gidermek</li>
-<li>Kullanıcı deneyimini geliştirmek</li>
-<li>Uygulamaların güvenliğini sağlamak</li>
-</ul>
-
-<h2>7. Reklam Hizmetleri</h2>
-
-<p>
-Uygulamalarımızda üçüncü taraf reklam hizmetleri kullanılabilir.
-</p>
-
-<p>
-Reklam sağlayıcıları kendi gizlilik politikalarına uygun olarak veri işleyebilir.
-Reklam gösterilmesi durumunda ilgili reklam sağlayıcısının gizlilik politikası da geçerli olacaktır.
-</p>
-
-<h2>8. Analitik Hizmetleri</h2>
-
-<p>
-Şu anda kullanıcı davranışlarını analiz eden herhangi bir analitik hizmeti kullanılmamaktadır.
-</p>
-
-<p>
-İleride analitik hizmetleri kullanılmaya başlanması durumunda bu Gizlilik Politikası güncellenecektir.
-</p>
-
-<h2>9. Verilerin Paylaşılması</h2>
-
-<p>
-OZATA;
-</p>
-
-<ul>
-<li>Kullanıcı verilerini satmaz.</li>
-<li>Kullanıcı verilerini kiralamaz.</li>
-<li>Kullanıcı verilerini pazarlama amacıyla paylaşmaz.</li>
-</ul>
-
-<p>
-Veriler yalnızca yürürlükteki yasal yükümlülüklerin gerektirdiği durumlarda yetkili resmi kurumlarla paylaşılabilir.
-</p>
-
-<h2>10. Veri Güvenliği</h2>
-
-<p>
-Kullanıcı verilerinin korunması amacıyla uygun teknik ve idari güvenlik önlemleri uygulanmaktadır.
-</p>
-
-<p>
-Bununla birlikte internet üzerinden gerçekleştirilen hiçbir veri aktarımının veya elektronik depolama yönteminin tamamen güvenli olduğu garanti edilemez.
-</p>
-
-<h2>11. Kullanıcı Hakları</h2>
-
-<ul>
-<li>Google hesap izinlerini istedikleri zaman Google Hesap ayarlarından yönetebilir veya kaldırabilir.</li>
-<li>Google Drive üzerinde bulunan uygulama verilerini kendi hesapları üzerinden yönetebilir veya silebilir.</li>
-<li>Uygulamayı diledikleri zaman cihazlarından kaldırabilir.</li>
-</ul>
-
-<h2>12. Çocukların Gizliliği</h2>
-
-<p>
-Uygulamalarımız bilinçli olarak 13 yaşın altındaki çocuklardan kişisel veri toplamayı hedeflemez.
-</p>
-
-<h2>13. Gizlilik Politikasındaki Değişiklikler</h2>
-
-<p>
-Bu Gizlilik Politikası gerektiğinde güncellenebilir.
-</p>
-
-<p>
-Yapılan değişiklikler bu sayfada yayınlandığı tarihten itibaren yürürlüğe girer.
-En güncel sürüm her zaman bu sayfada yer alacaktır.
-</p>
-
-<h2>14. İletişim</h2>
-
-<p>
-Bu Gizlilik Politikası hakkında herhangi bir sorunuz, öneriniz veya talebiniz olması durumunda bizimle iletişime geçebilirsiniz.
-</p>
-
-<p>
-
-<strong>OZATA</strong><br><br>
-
-📧 <strong>E-posta:</strong><br>
-<a href="mailto:ozata.apps@gmail.com">ozata.apps@gmail.com</a>
-
-<br><br>
-
-🌐 <strong>Web Sitesi:</strong><br>
-<a href="https://ozata-apps.github.io">
-https://ozata-apps.github.io
+<a href="index.html" class="back-btn">
+    🏠 Ana Sayfaya Dön
 </a>
 
-<br><br>
+<h1>Gizlilik Politikaları</h1>
 
-📸 <strong>Instagram:</strong><br>
-<a href="https://instagram.com/ozataapps">
-@ozata.apps
-</a>
-
-<br><br>
-
-📢 <strong>Telegram:</strong><br>
-<a href="https://t.me/ozataapps">
-t.me/ozataapps
-</a>
-
+<p class="intro">
+OZATA tarafından geliştirilen her uygulamanın kendine özgü bir gizlilik politikası vardır.
+Aşağıdan uygulamanızı seçerek o uygulamaya ait gizlilik politikasını görüntüleyebilirsiniz.
 </p>
+
+<div class="app-grid">
+
+    <div class="app-card">
+        <div class="app-icon">💰</div>
+        <h2>Muhasebecim</h2>
+        <p>Gelir ve gider takibi uygulaması için gizlilik politikası.</p>
+        <a href="privacy-muhasebecim.html" class="app-card-link">
+            Gizlilik Politikasını Görüntüle →
+        </a>
+    </div>
+
+    <div class="app-card">
+        <div class="app-icon">💊</div>
+        <h2>MedTak</h2>
+        <p>İlaç takibi ve sesli hatırlatma uygulaması için gizlilik politikası.</p>
+        <a href="privacy-medtak.html" class="app-card-link">
+            Gizlilik Politikasını Görüntüle →
+        </a>
+    </div>
+
+</div>
 
 <div class="footer">
 
