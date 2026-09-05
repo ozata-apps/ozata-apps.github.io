@@ -1,9 +1,9 @@
 /* ============================================================
    OZATA — main.js (yeni UI)
-   - Navbar scroll durumu + mobil menü (ozata-apps-web Navbar.tsx)
+   - Navbar scroll durumu + mobil menü 
    - Spotlight: mouse'u yumuşak takip eden ışık (framer-motion
      useSpring bounce:0 karşılığı — lerp ile spring benzeri yumuşaklık)
-   - CursorGlow (ozata-apps-web CursorGlow.tsx)
+   - CursorGlow 
    - Fade-in scroll animasyonları
    ============================================================ */
 (function () {
@@ -79,7 +79,7 @@
         });
 
         /* ================= CURSOR GLOW =================
-           (ozata-apps-web CursorGlow.tsx: sadece hover destekleyen cihazlarda) */
+         sadece hover destekleyen cihazlarda) */
         var glow = document.getElementById("cursorGlow");
         if (glow && !window.matchMedia("(hover: none)").matches) {
             window.addEventListener("mousemove", function (e) {
