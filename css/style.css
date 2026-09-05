@@ -1,14 +1,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ============================================================
-   OZATA — YENİ UI (ozata-apps-web 3D UI'sinin vanilla CSS çevirisi)
-   Tasarım DNA: koyu zemin, primary mor (hsl 238 90% 65%),
-   rounded-2xl dış kartlar + içinde Spotlight (mouse ışığı),
-   gradient başlıklar, indigo→purple gradient butonlar.
-   ============================================================ */
+
 
 :root {
-    /* ozata-apps-web globals.css :root değerleri (HSL) */
+    
     --background: 5 8% 10%;
     --foreground: 0 0% 100%;
     --card: 10 15% 12%;
@@ -49,8 +44,7 @@ body {
     cursor: default;
 }
 
-/* Container — canlı site (Tailwind .container.mx-auto.px-4/6/8) ile birebir:
-   1536px'e kadar tüm genişlik, sonra sabit; responsive px artar */
+
 .container {
     width: 100%;
     max-width: 1536px;
@@ -64,7 +58,7 @@ a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 /* ============================================================
-   SPLINE 3D ARKA PLAN (ozata-apps-web Hero)
+   SPLINE 3D ARKA PLAN 
    ============================================================ */
 .hero {
     position: relative;
@@ -98,7 +92,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     justify-content: center;
 }
 
-/* Spinner (SplineScene fallback .loader ile aynı) */
+/* Spinner */
 .loader {
     width: 48px;
     height: 48px;
@@ -115,7 +109,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================================
-   SECTION CARD + SPOTLIGHT (ozata-apps-web UI DNA)
+   SECTION CARD + SPOTLIGHT 
    Her section: bg-black/30 Card + rounded-2xl + Spotlight
    ============================================================ */
 .section-card {
@@ -131,10 +125,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-inner { position: relative; padding: 2rem; }
 @media (min-width: 1024px) { .section-inner { padding: 3.5rem; } }
 
-/* Spotlight: mouse'u takip eden beyaz ışık.
-   Pozisyon left/top ile set edilir (framer-motion motionValue tarzı),
-   transform KULLANILMAZ — çünkü transform, taban left/top'un üstüne
-   eklenir ve ışık kayar. Taban: -top-40 left-0, md+: left-60 -top-20 */
+
 .spotlight {
     position: absolute;
     top: -10rem;
@@ -158,7 +149,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-card:hover .spotlight { opacity: 1; }
 
 /* ============================================================
-   NAVBAR (ozata-apps-web Navbar.tsx)
+   NAVBAR 
    ============================================================ */
 .navbar {
     position: fixed;
@@ -261,7 +252,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================================
-   HERO (ozata-apps-web Hero.tsx — Spotlight'lu Card içinde)
+   HERO ( Spotlight'lu Card içinde)
    ============================================================ */
 .hero-container { position: relative; z-index: 10; width: 100%; }
 
@@ -356,7 +347,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 640px) { .hero-buttons { flex-direction: row; } }
 
 /* ============================================================
-   BUTONLAR (ozata-apps-web Button + gradient override)
+   BUTONLAR
    ============================================================ */
 .btn-google,
 .btn-submit {
@@ -406,7 +397,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .magnetic { position: relative; overflow: hidden; }
 
 /* ============================================================
-   PRODUCT SECTION (ozata-apps-web ProductSection.tsx)
+   PRODUCT SECTION 
    ============================================================ */
 .product-section { position: relative; padding: 4rem 0; overflow: hidden; }
 @media (min-width: 1024px) { .product-section { padding: 6rem 0; } }
@@ -467,7 +458,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================================
-   PHONE MOCKUP (ozata-apps-web globals.css utilities — birebir)
+   PHONE MOCKUP 
    ============================================================ */
 .phone-mockup {
     width: 320px;
@@ -514,7 +505,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 480px) { .phone-mockup { width: 260px; height: 540px; } }
 
 /* ============================================================
-   COMING SOON (ozata-apps-web ComingSoonSection.tsx)
+   COMING SOON 
    ============================================================ */
 .coming-soon-section { position: relative; padding: 4rem 0; overflow: hidden; }
 @media (min-width: 1024px) { .coming-soon-section { padding: 6rem 0; } }
@@ -616,7 +607,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .coming-app-item p { color: #a3a3a3; }
 
 /* ============================================================
-   WHY SECTION (ozata-apps-web WhySection.tsx)
+   WHY SECTION 
    ============================================================ */
 .why-section { position: relative; padding: 4rem 0; }
 @media (min-width: 1024px) { .why-section { padding: 6rem 0; } }
@@ -686,7 +677,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .why-card p { color: #a3a3a3; font-size: 0.9rem; }
 
 /* ============================================================
-   MISSION SECTION (ozata-apps-web MissionSection.tsx)
+   MISSION SECTION
    ============================================================ */
 .mission-section { position: relative; padding: 4rem 0; overflow: hidden; }
 @media (min-width: 1024px) { .mission-section { padding: 6rem 0; } }
@@ -714,7 +705,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================================
-   CONTACT SECTION (ozata-apps-web ContactSection.tsx)
+   CONTACT SECTION
    ============================================================ */
 .contact-section { position: relative; padding: 4rem 0; overflow: hidden; }
 @media (min-width: 1024px) { .contact-section { padding: 6rem 0; } }
@@ -820,7 +811,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-submit { width: 100%; }
 
 /* ============================================================
-   FOOTER (ozata-apps-web Footer.tsx)
+   FOOTER 
    ============================================================ */
 .footer { position: relative; padding: 0 0 2.5rem; }
 
@@ -925,7 +916,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================================
-   CURSOR GLOW (ozata-apps-web CursorGlow.tsx — birebir)
+   CURSOR GLOW 
    ============================================================ */
 .cursor-glow {
     position: fixed;
@@ -945,7 +936,7 @@ body:hover .cursor-glow { opacity: 1; }
 @media (max-width: 768px) { .cursor-glow { display: none; } }
 
 /* ============================================================
-   RESPONSIVE (ozata-apps-web mantığı: lg altı mobil menü)
+   RESPONSIVE
    ============================================================ */
 @media (max-width: 1023px) {
     .nav-links, .nav-btn { display: none; }
@@ -967,7 +958,7 @@ body:hover .cursor-glow { opacity: 1; }
 
 /* ============================================================
    SPLASH PRELOADER + BUTON + HINT + RIPPLE
-   (Mevcut ozata-apps.github.io mantığı — DEĞİŞMEDİ)
+
    ============================================================ */
 #preloader {
     position: fixed;
@@ -1106,7 +1097,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 /* ============================================================
-   APP DETAIL PAGE (muhasebecim.html — mevcut site stilleri, DEĞİŞMEDİ)
+   APP DETAIL PAGE 
    ============================================================ */
 .app-screenshot {
     width: 100%;
@@ -1273,7 +1264,7 @@ body:hover .cursor-glow { opacity: 1; }
 }
 
 /* ============================================================
-   FORM MESSAGE (mevcut site — DEĞİŞMEDİ)
+   FORM MESSAGE
    ============================================================ */
 .form-message {
     margin-top: 16px;
