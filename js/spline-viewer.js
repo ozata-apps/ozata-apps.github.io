@@ -1,5 +1,5 @@
 /* ============================================================
-   SPLINE 3D ROBOT — ozata-apps-web Hero mantığının vanilla JS çevirisi
+   SPLINE 3D ROBOT 
    - Sahne: https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode
    - Robot sabit (fixed) tam ekran arka plan. Canvas pointer-events: none
      olduğundan gerçek wheel/drag/touch olayları ASLA canvas'a ulaşmaz.
@@ -16,7 +16,7 @@
 
     if (!container) return;
 
-    // === SCROLLY SABİTLEME (Next.js Hero ile birebir aynı) ===
+    // === SCROLLY SABİTLEME ==
     var scrollYDescriptor;
     var pageYOffsetDescriptor;
     try {
