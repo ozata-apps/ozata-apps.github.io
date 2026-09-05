@@ -1,3 +1,5 @@
+import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js').catch(() => {});
+
 document.addEventListener('DOMContentLoaded', () => {
   const splash = document.getElementById('splash');
   const video = document.getElementById('splashVideo');
